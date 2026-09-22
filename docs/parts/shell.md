@@ -69,8 +69,10 @@ A **panel-mount DC barrel jack** with:
 - a **5.5 × 2.1 mm** socket, if you are feeding a Geekworm X1202 or X1206 —
   that is the barrel size those boards use.
 
-Buy one that comes **pre-wired with a flying lead**. Nothing in this build
-needs soldering, and a jack with solder tags would break that.
+Buy one that comes **pre-wired with a flying lead**. This build keeps soldering
+to a minimum, and a jack with solder tags adds a joint you would otherwise not
+have to make. You will still need an iron for the heat-set inserts, as
+[Required hardware](../hardware.md) says.
 
 Unlike the Ethernet one, the
 [reference DC jack](../../reference-models/connectors/DC_5.5x2.1_Panel_Jack.step)
