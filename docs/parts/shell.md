@@ -97,10 +97,9 @@ is representative: it is a round jack with an Ø11 mm threaded barrel behind an
 
 ### What fits the button opening
 
-A **12 mm panel-mount momentary push button** — Ø12.5 mm is a 12 mm button
-hole, not a 16 mm one, so the widely referenced 16 mm buttons do **not** fit
-this shell. It must be **momentary** (spring-back): the X1202/X1206 read how
-long the button is held, so a latching or toggle switch will not work.
+A **12 mm panel-mount momentary push button**. It must be **momentary**
+(spring-back): the X1202/X1206 read how long the button is held, so a latching
+or toggle switch will not work.
 
 ## Board-specific shells
 
