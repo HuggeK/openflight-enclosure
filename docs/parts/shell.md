@@ -47,10 +47,15 @@ numbers on the datasheet before ordering:
    M3 self-tapper into the plastic, both work;
 3. it is rated for a **3 mm** panel.
 
-The [reference model](../../reference-models/connectors/Ethernet_Panel_Coupler.step)
-in this repo is a generic stand-in drawn to check fit. It carries no
-manufacturer part number, so no specific product is endorsed here — match the
-three numbers above instead.
+> [!NOTE]
+> **Do not buy from the reference model for this opening.**
+> [`reference-models/connectors/Ethernet_Panel_Coupler.step`](../../reference-models/connectors/Ethernet_Panel_Coupler.step)
+> is a **round coupler with a 21.7 mm thread**, contributed in
+> [#8](https://github.com/open-flight/openflight-enclosure/pull/8) as a
+> dimensional reference for *other* enclosure projects. This shell has no
+> round Ethernet bore at all — its opening is the 16.0 × 14.0 mm rectangle
+> above — so that part does not fit a `v1` shell. Match the three numbers
+> instead; no specific product is endorsed here.
 
 ### What fits the DC opening
 
@@ -67,15 +72,24 @@ A **panel-mount DC barrel jack** with:
 Buy one that comes **pre-wired with a flying lead**. Nothing in this build
 needs soldering, and a jack with solder tags would break that.
 
+Unlike the Ethernet one, the
+[reference DC jack](../../reference-models/connectors/DC_5.5x2.1_Panel_Jack.step)
+is representative: it is a round jack with an Ø11 mm threaded barrel behind an
+Ø15.5 mm flange, 18.5 mm long overall. That drops into the Ø12.5 mm hole with
+0.75 mm of slop per side, which the flange covers.
+
 > [!WARNING]
 > **Barrel-jack polarity — get this wrong and you can destroy the Pi, the UPS
 > and the radars at once.** A 5.5 × 2.1 mm plug carries no keying: a
 > centre-negative supply mates perfectly with a centre-positive jack and
 > reverses the rail. The Geekworm **X1202 and X1206 both expect centre pin
-> positive (+)**. When you wire the panel jack, the **centre/tip contact goes
-> to +** and the sleeve to −, and the supply you plug in must also be centre
-> positive. Check the jack's own pinout with a multimeter before the first
-> power-up rather than trusting wire colour. The openflight
+> positive (+)** — confirmed by Geekworm in
+> [this exchange](https://github.com/open-flight/openflight/pull/273#issuecomment-5779406632);
+> their wiki pages do not state it either way, so do not go looking there.
+> When you wire the panel jack, the **centre/tip contact goes to +** and the
+> sleeve to −, and the supply you plug in must also be centre positive. Buzz
+> the jack out with a multimeter before the first power-up rather than
+> trusting wire colour. The openflight
 > [power guide](https://github.com/open-flight/openflight/blob/main/docs/get-started/power.md)
 > covers the wiring end to end.
 
