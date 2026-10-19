@@ -14,6 +14,7 @@ Print STLs from each part’s `v1/` folder. `experimental/` is for in-progress p
 | [Choosing a variant](docs/choosing-a-variant.md) | Decision tree and print list |
 | [Printing](docs/printing.md) | Orientation, materials, settings |
 | [Required hardware](docs/hardware.md) | Heat-set inserts and screws per part |
+| [Insert map](https://open-flight.github.io/openflight-enclosure/viewer/) | 3D view of every insert and screw hole, with diameter and depth ([how it works](tools/insert-map/README.md)) |
 | [Shell and power](docs/parts/shell.md) | Ethernet, DC jack, and power button; X12 boards |
 | [Pi adapters](docs/parts/adapters.md) | No-UPS (x1202) and x1209 (x12-a1 shell) |
 | [Feet](docs/parts/feet.md) | Solid vs adjustable |

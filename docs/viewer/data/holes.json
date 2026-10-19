@@ -1,0 +1,4605 @@
+{
+ "generated_by": "tools/insert-map/analyze.py",
+ "units": "mm",
+ "classes": [
+  {
+   "kind": "m3-insert",
+   "label": "M3 heat-set insert",
+   "d_min": 4.15,
+   "d_max": 4.8
+  },
+  {
+   "kind": "m25-insert",
+   "label": "M2.5 heat-set insert",
+   "d_min": 3.15,
+   "d_max": 3.6
+  },
+  {
+   "kind": "m2-insert",
+   "label": "M2 heat-set insert",
+   "d_min": 2.65,
+   "d_max": 3.15
+  },
+  {
+   "kind": "pilot",
+   "label": "Self-tapping pilot hole",
+   "d_min": 1.4,
+   "d_max": 2.65
+  }
+ ],
+ "parts": [
+  {
+   "path": "stls/adapters/v1/x1202 Pi Adapater.stl",
+   "group": "adapters",
+   "status": "v1",
+   "name": "x1202 Pi Adapater",
+   "bounds": [
+    [
+     -48.0,
+     -42.5,
+     0.0
+    ],
+    [
+     48.0,
+     42.5,
+     6.0
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M3.1)",
+     "d": 3.48,
+     "depth": 2.0,
+     "blind": false,
+     "entry": [
+      -44.5,
+      19.0,
+      0.1
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      -4.5,
+      19.0,
+      0.1
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.48,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      44.5,
+      19.0,
+      0.1
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M3.1)",
+     "d": 3.48,
+     "depth": 2.0,
+     "blind": false,
+     "entry": [
+      -44.5,
+      -39.0,
+      0.1
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      -4.5,
+      -39.0,
+      0.1
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.48,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      44.5,
+      -39.0,
+      0.1
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0
+    }
+   ]
+  },
+  {
+   "path": "stls/adapters/v1/x1209 PI Adapater.stl",
+   "group": "adapters",
+   "status": "v1",
+   "name": "x1209 PI Adapater",
+   "bounds": [
+    [
+     52.31,
+     15.42,
+     -82.05
+    ],
+    [
+     146.21,
+     79.96,
+     -63.23
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 4.5,
+     "blind": false,
+     "entry": [
+      55.81,
+      76.79,
+      -71.15
+     ],
+     "dir": [
+      0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 4.5,
+     "blind": false,
+     "entry": [
+      142.71,
+      76.79,
+      -71.15
+     ],
+     "dir": [
+      0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 5.5,
+     "blind": false,
+     "entry": [
+      85.71,
+      76.43,
+      -69.15
+     ],
+     "dir": [
+      0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 5.5,
+     "blind": false,
+     "entry": [
+      134.71,
+      76.43,
+      -69.15
+     ],
+     "dir": [
+      0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 4.7,
+     "blind": false,
+     "entry": [
+      55.81,
+      19.69,
+      -81.35
+     ],
+     "dir": [
+      0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 4.7,
+     "blind": false,
+     "entry": [
+      142.71,
+      19.69,
+      -81.35
+     ],
+     "dir": [
+      0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 5.5,
+     "blind": false,
+     "entry": [
+      85.71,
+      19.34,
+      -79.35
+     ],
+     "dir": [
+      0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (M2.5 screw)",
+     "d": 2.68,
+     "depth": 5.5,
+     "blind": false,
+     "entry": [
+      134.71,
+      19.34,
+      -79.35
+     ],
+     "dir": [
+      -0.0,
+      -0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "Pi / HAT screw"
+    }
+   ]
+  },
+  {
+   "path": "stls/camera/eol/Front-Camera.stl",
+   "group": "camera",
+   "status": "eol",
+   "name": "Front-Camera",
+   "bounds": [
+    [
+     -0.36,
+     78.32,
+     -25.81
+    ],
+    [
+     199.64,
+     105.32,
+     -3.81
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.98,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      85.64,
+      101.32,
+      -25.71
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Camera (OV9281)"
+    },
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.98,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      113.64,
+      101.32,
+      -25.71
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Camera (OV9281)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 8.0,
+     "blind": true,
+     "entry": [
+      12.64,
+      87.32,
+      -18.71
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 8.0,
+     "blind": true,
+     "entry": [
+      186.64,
+      87.32,
+      -18.71
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    }
+   ]
+  },
+  {
+   "path": "stls/camera/experimental/Front-Camera-Sound-Detector.stl",
+   "group": "camera",
+   "status": "experimental",
+   "name": "Front-Camera-Sound-Detector",
+   "bounds": [
+    [
+     0.0,
+     78.79,
+     -25.87
+    ],
+    [
+     200.0,
+     105.79,
+     -3.87
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.99,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      31.0,
+      101.79,
+      -25.77
+     ],
+     "dir": [
+      0.0,
+      -0.0002,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Camera (OV9281)"
+    },
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.99,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      59.0,
+      101.79,
+      -25.77
+     ],
+     "dir": [
+      -0.0,
+      -0.0002,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Camera (OV9281)"
+    },
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.78,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      115.92,
+      93.32,
+      -13.37
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Sound-detector retainer"
+    },
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.78,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      167.92,
+      93.32,
+      -13.37
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Sound-detector retainer"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.0,
+     "blind": true,
+     "entry": [
+      13.0,
+      87.79,
+      -18.77
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      187.0,
+      87.79,
+      -18.77
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    }
+   ]
+  },
+  {
+   "path": "stls/camera/v1/Front-Camera-Sound-Detector.stl",
+   "group": "camera",
+   "status": "v1",
+   "name": "Front-Camera-Sound-Detector",
+   "bounds": [
+    [
+     0.0,
+     78.79,
+     -25.87
+    ],
+    [
+     200.0,
+     105.79,
+     -3.87
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.99,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      31.0,
+      101.79,
+      -25.77
+     ],
+     "dir": [
+      0.0,
+      -0.0002,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Camera (OV9281)"
+    },
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.99,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      59.0,
+      101.79,
+      -25.77
+     ],
+     "dir": [
+      -0.0,
+      -0.0002,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Camera (OV9281)"
+    },
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.78,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      115.92,
+      93.32,
+      -13.37
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Sound-detector retainer"
+    },
+    {
+     "kind": "m2-insert",
+     "label": "M2 heat-set insert",
+     "d": 2.78,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      167.92,
+      93.32,
+      -13.37
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Sound-detector retainer"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.0,
+     "blind": true,
+     "entry": [
+      13.0,
+      87.79,
+      -18.77
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      187.0,
+      87.79,
+      -18.77
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    }
+   ]
+  },
+  {
+   "path": "stls/camera/v1/Sound-Detector-Retainer.stl",
+   "group": "camera",
+   "status": "v1",
+   "name": "Sound-Detector-Retainer",
+   "bounds": [
+    [
+     113.42,
+     76.32,
+     -15.97
+    ],
+    [
+     170.42,
+     99.32,
+     -13.47
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.4)",
+     "d": 2.78,
+     "depth": 2.4,
+     "blind": false,
+     "entry": [
+      115.92,
+      93.32,
+      -15.87
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Sound-detector retainer"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.4)",
+     "d": 2.78,
+     "depth": 2.4,
+     "blind": false,
+     "entry": [
+      167.92,
+      93.32,
+      -15.87
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Sound-detector retainer"
+    }
+   ]
+  },
+  {
+   "path": "stls/feet/v1/Feet-Adjustable.stl",
+   "group": "feet",
+   "status": "v1",
+   "name": "Feet-Adjustable",
+   "bounds": [
+    [
+     146.04,
+     -5.0,
+     -97.04
+    ],
+    [
+     164.04,
+     0.0,
+     -79.08
+    ]
+   ],
+   "holes": []
+  },
+  {
+   "path": "stls/feet/v1/Feet-Solid.stl",
+   "group": "feet",
+   "status": "v1",
+   "name": "Feet-Solid",
+   "bounds": [
+    [
+     145.04,
+     -5.0,
+     -98.05
+    ],
+    [
+     165.01,
+     2.0,
+     -78.07
+    ]
+   ],
+   "holes": []
+  },
+  {
+   "path": "stls/radar/eol/Front-Radar.stl",
+   "group": "radar",
+   "status": "eol",
+   "name": "Front-Radar",
+   "bounds": [
+    [
+     -0.0,
+     0.0,
+     -18.91
+    ],
+    [
+     200.0,
+     78.97,
+     9.63
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      13.0,
+      74.79,
+      -18.81
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      187.0,
+      74.79,
+      -18.81
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.3,
+     "blind": true,
+     "entry": [
+      90.0,
+      73.74,
+      -16.61
+     ],
+     "dir": [
+      0.0,
+      0.1723,
+      0.985
+     ],
+     "tilt": 9.9,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 5.4,
+     "blind": true,
+     "entry": [
+      172.0,
+      73.7,
+      -16.62
+     ],
+     "dir": [
+      -0.0,
+      0.1556,
+      0.9878
+     ],
+     "tilt": 9.0,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 5.4,
+     "blind": true,
+     "entry": [
+      14.5,
+      67.27,
+      -10.22
+     ],
+     "dir": [
+      0.0,
+      0.1615,
+      0.9869
+     ],
+     "tilt": 9.3,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 5.4,
+     "blind": true,
+     "entry": [
+      63.0,
+      67.27,
+      -10.22
+     ],
+     "dir": [
+      0.0,
+      0.1615,
+      0.9869
+     ],
+     "tilt": 9.3,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.5,
+     "blind": true,
+     "entry": [
+      14.5,
+      18.98,
+      -1.82
+     ],
+     "dir": [
+      0.0,
+      0.1707,
+      0.9853
+     ],
+     "tilt": 9.8,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.5,
+     "blind": true,
+     "entry": [
+      44.0,
+      18.98,
+      -1.82
+     ],
+     "dir": [
+      0.0,
+      0.1707,
+      0.9853
+     ],
+     "tilt": 9.8,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.8,
+     "blind": true,
+     "entry": [
+      13.0,
+      10.96,
+      -7.61
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.8,
+     "blind": true,
+     "entry": [
+      187.0,
+      10.96,
+      -7.61
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 5.4,
+     "blind": true,
+     "entry": [
+      89.97,
+      7.78,
+      -5.02
+     ],
+     "dir": [
+      -0.0,
+      0.1586,
+      0.9873
+     ],
+     "tilt": 9.1,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 5.4,
+     "blind": true,
+     "entry": [
+      171.97,
+      7.71,
+      -5.02
+     ],
+     "dir": [
+      0.0,
+      0.1597,
+      0.9872
+     ],
+     "tilt": 9.2,
+     "role": "OPS243 mount"
+    }
+   ]
+  },
+  {
+   "path": "stls/radar/experimental/Front-Radar-No-Fill.stl",
+   "group": "radar",
+   "status": "experimental",
+   "name": "Front-Radar-No-Fill",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -28.46
+    ],
+    [
+     200.0,
+     78.79,
+     9.63
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 9.6,
+     "blind": true,
+     "entry": [
+      13.0,
+      74.79,
+      -18.76
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 9.6,
+     "blind": true,
+     "entry": [
+      187.0,
+      74.79,
+      -18.76
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 6.1,
+     "blind": false,
+     "entry": [
+      90.0,
+      73.68,
+      -16.56
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 6.1,
+     "blind": false,
+     "entry": [
+      172.0,
+      72.27,
+      -24.56
+     ],
+     "dir": [
+      -0.0,
+      0.173,
+      0.9849
+     ],
+     "tilt": 10.0,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.7,
+     "blind": false,
+     "entry": [
+      33.73,
+      61.62,
+      -27.36
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.7,
+     "blind": false,
+     "entry": [
+      82.23,
+      61.62,
+      -27.36
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.9,
+     "blind": false,
+     "entry": [
+      33.73,
+      13.35,
+      -18.96
+     ],
+     "dir": [
+      0.0,
+      0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 9.9,
+     "blind": false,
+     "entry": [
+      82.23,
+      13.35,
+      -18.96
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.8,
+     "blind": true,
+     "entry": [
+      13.0,
+      10.96,
+      -7.56
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.8,
+     "blind": true,
+     "entry": [
+      187.0,
+      10.96,
+      -7.56
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.3,
+     "blind": true,
+     "entry": [
+      89.97,
+      7.76,
+      -4.96
+     ],
+     "dir": [
+      -0.0,
+      0.1713,
+      0.9852
+     ],
+     "tilt": 9.9,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.3,
+     "blind": true,
+     "entry": [
+      171.97,
+      7.7,
+      -4.96
+     ],
+     "dir": [
+      0.0,
+      0.172,
+      0.9851
+     ],
+     "tilt": 9.9,
+     "role": "OPS243 mount"
+    }
+   ]
+  },
+  {
+   "path": "stls/radar/v1/Front-Radar-No-Fill.stl",
+   "group": "radar",
+   "status": "v1",
+   "name": "Front-Radar-No-Fill",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -25.39
+    ],
+    [
+     200.0,
+     78.79,
+     9.63
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 9.8,
+     "blind": true,
+     "entry": [
+      13.0,
+      74.79,
+      -18.89
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 9.6,
+     "blind": true,
+     "entry": [
+      187.0,
+      74.79,
+      -18.89
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 5.9,
+     "blind": false,
+     "entry": [
+      90.0,
+      72.29,
+      -24.49
+     ],
+     "dir": [
+      0.0,
+      0.173,
+      0.9849
+     ],
+     "tilt": 10.0,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 5.9,
+     "blind": false,
+     "entry": [
+      172.0,
+      72.29,
+      -24.49
+     ],
+     "dir": [
+      -0.0,
+      0.173,
+      0.9849
+     ],
+     "tilt": 10.0,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.4,
+     "blind": false,
+     "entry": [
+      14.5,
+      65.05,
+      -22.69
+     ],
+     "dir": [
+      0.0,
+      0.1735,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 11.0,
+     "blind": false,
+     "entry": [
+      63.0,
+      64.94,
+      -23.29
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.3,
+     "blind": false,
+     "entry": [
+      44.0,
+      17.69,
+      -9.09
+     ],
+     "dir": [
+      0.0,
+      0.1736,
+      0.9848
+     ],
+     "tilt": 10.0,
+     "role": "IWR6843 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.6,
+     "blind": true,
+     "entry": [
+      13.0,
+      10.96,
+      -7.49
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 8.6,
+     "blind": true,
+     "entry": [
+      187.0,
+      10.96,
+      -7.49
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.4,
+     "blind": true,
+     "entry": [
+      89.97,
+      7.75,
+      -5.09
+     ],
+     "dir": [
+      -0.0,
+      0.1658,
+      0.9862
+     ],
+     "tilt": 9.5,
+     "role": "OPS243 mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 5.4,
+     "blind": true,
+     "entry": [
+      171.97,
+      7.68,
+      -5.09
+     ],
+     "dir": [
+      -0.0,
+      0.1668,
+      0.986
+     ],
+     "tilt": 9.6,
+     "role": "OPS243 mount"
+    }
+   ]
+  },
+  {
+   "path": "stls/screen/v1/Screen-1024x600.stl",
+   "group": "screen",
+   "status": "v1",
+   "name": "Screen-1024x600",
+   "bounds": [
+    [
+     -0.36,
+     94.14,
+     -57.56
+    ],
+    [
+     199.64,
+     213.78,
+     -3.81
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      31.73,
+      206.78,
+      -57.46
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      167.54,
+      206.78,
+      -57.46
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 4.3,
+     "blind": true,
+     "entry": [
+      20.84,
+      206.09,
+      -50.27
+     ],
+     "dir": [
+      0.0,
+      0.3102,
+      0.9507
+     ],
+     "tilt": 18.1,
+     "role": "Display panel mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 4.3,
+     "blind": true,
+     "entry": [
+      178.44,
+      206.09,
+      -50.27
+     ],
+     "dir": [
+      0.0,
+      0.3102,
+      0.9507
+     ],
+     "tilt": 18.1,
+     "role": "Display panel mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      8.54,
+      111.32,
+      -22.86
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      190.74,
+      111.32,
+      -22.86
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 4.2,
+     "blind": true,
+     "entry": [
+      20.84,
+      98.03,
+      -10.87
+     ],
+     "dir": [
+      -0.0,
+      0.3248,
+      0.9458
+     ],
+     "tilt": 19.0,
+     "role": "Display panel mount"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 4.2,
+     "blind": true,
+     "entry": [
+      178.44,
+      98.03,
+      -10.87
+     ],
+     "dir": [
+      -0.0,
+      0.3248,
+      0.9458
+     ],
+     "tilt": 19.0,
+     "role": "Display panel mount"
+    }
+   ]
+  },
+  {
+   "path": "stls/screen/v1/Screen-800x480.stl",
+   "group": "screen",
+   "status": "v1",
+   "name": "Screen-800x480",
+   "bounds": [
+    [
+     0.0,
+     96.79,
+     -57.62
+    ],
+    [
+     200.0,
+     214.25,
+     -3.87
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      32.09,
+      207.25,
+      -57.52
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      167.91,
+      207.25,
+      -57.52
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      24.33,
+      192.74,
+      -53.92
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      179.23,
+      192.74,
+      -53.92
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 3.8,
+     "blind": true,
+     "entry": [
+      191.1,
+      111.83,
+      -23.32
+     ],
+     "dir": [
+      -0.0,
+      -0.0408,
+      0.9992
+     ],
+     "tilt": 2.3,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      8.9,
+      111.79,
+      -23.32
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      24.33,
+      106.27,
+      -22.52
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      179.23,
+      106.27,
+      -22.52
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    }
+   ]
+  },
+  {
+   "path": "stls/screen/v1/Screen-RPI-Display-2.stl",
+   "group": "screen",
+   "status": "v1",
+   "name": "Screen-RPI-Display-2",
+   "bounds": [
+    [
+     0.0,
+     96.78,
+     -57.62
+    ],
+    [
+     200.0,
+     214.25,
+     -3.87
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      32.09,
+      207.25,
+      -57.52
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      167.91,
+      207.25,
+      -57.52
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      30.33,
+      184.66,
+      -47.32
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      170.33,
+      184.66,
+      -47.32
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      30.33,
+      118.22,
+      -23.12
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M2.5)",
+     "d": 2.87,
+     "depth": 1.0,
+     "blind": false,
+     "entry": [
+      170.33,
+      118.22,
+      -23.12
+     ],
+     "dir": [
+      0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      8.9,
+      111.79,
+      -23.32
+     ],
+     "dir": [
+      0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.38,
+     "depth": 6.0,
+     "blind": false,
+     "entry": [
+      191.1,
+      111.79,
+      -23.32
+     ],
+     "dir": [
+      -0.0006,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    }
+   ]
+  },
+  {
+   "path": "stls/screen/v1/Screen-RPI-Display.stl",
+   "group": "screen",
+   "status": "v1",
+   "name": "Screen-RPI-Display",
+   "bounds": [
+    [
+     0.0,
+     96.79,
+     -57.62
+    ],
+    [
+     200.0,
+     214.25,
+     -3.87
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      32.09,
+      207.25,
+      -57.52
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      167.91,
+      207.25,
+      -57.52
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M3)",
+     "d": 3.38,
+     "depth": 1.5,
+     "blind": false,
+     "entry": [
+      38.78,
+      185.09,
+      -45.32
+     ],
+     "dir": [
+      -0.0,
+      0.342,
+      0.9397
+     ],
+     "tilt": 20.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M3)",
+     "d": 3.38,
+     "depth": 1.5,
+     "blind": false,
+     "entry": [
+      164.98,
+      185.09,
+      -45.32
+     ],
+     "dir": [
+      -0.0,
+      0.342,
+      0.9397
+     ],
+     "tilt": 20.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M3)",
+     "d": 3.38,
+     "depth": 1.3,
+     "blind": false,
+     "entry": [
+      38.78,
+      123.45,
+      -22.72
+     ],
+     "dir": [
+      0.0,
+      0.342,
+      0.9397
+     ],
+     "tilt": 20.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "clearance",
+     "label": "Clearance hole (screw passes through, ~M3)",
+     "d": 3.38,
+     "depth": 1.3,
+     "blind": false,
+     "entry": [
+      164.98,
+      123.45,
+      -22.72
+     ],
+     "dir": [
+      -0.0,
+      0.342,
+      0.9397
+     ],
+     "tilt": 20.0,
+     "role": "Display mounting screw"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      8.9,
+      111.79,
+      -23.32
+     ],
+     "dir": [
+      -0.0,
+      -0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 10.0,
+     "blind": true,
+     "entry": [
+      191.1,
+      111.79,
+      -23.32
+     ],
+     "dir": [
+      -0.0,
+      0.0,
+      1.0
+     ],
+     "tilt": 0.0,
+     "role": "Case mount: screw comes from the rear of the shell"
+    }
+   ]
+  },
+  {
+   "path": "stls/shell/eol/usbc-ethernet/Shell-x12-a1.stl",
+   "group": "shell",
+   "status": "eol",
+   "name": "Shell-x12-a1",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -108.05
+    ],
+    [
+     200.0,
+     214.25,
+     3.02
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.7,
+     "blind": true,
+     "entry": [
+      55.81,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      -0.0,
+      0.1681,
+      -0.9858
+     ],
+     "tilt": 9.7,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.7,
+     "blind": true,
+     "entry": [
+      142.71,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      -0.0,
+      0.1681,
+      -0.9858
+     ],
+     "tilt": 9.7,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      55.81,
+      20.08,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1713,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      142.71,
+      20.08,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1713,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      44.96,
+      8.9,
+      -88.06
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      170.0,
+      8.9,
+      -15.98
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      30.0,
+      0.1,
+      -15.98
+     ],
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      155.04,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    }
+   ]
+  },
+  {
+   "path": "stls/shell/eol/usbc-ethernet/Shell-x1202.stl",
+   "group": "shell",
+   "status": "eol",
+   "name": "Shell-x1202",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -108.05
+    ],
+    [
+     200.0,
+     214.25,
+     3.02
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.7,
+     "blind": true,
+     "entry": [
+      45.71,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      0.0,
+      0.1694,
+      -0.9855
+     ],
+     "tilt": 9.8,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.7,
+     "blind": true,
+     "entry": [
+      134.71,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      -0.0,
+      0.1694,
+      -0.9855
+     ],
+     "tilt": 9.8,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.5,
+     "blind": true,
+     "entry": [
+      45.71,
+      20.09,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1716,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.5,
+     "blind": true,
+     "entry": [
+      134.71,
+      20.09,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1716,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      44.96,
+      8.9,
+      -88.06
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      170.0,
+      8.9,
+      -15.98
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      30.0,
+      0.1,
+      -15.98
+     ],
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      155.04,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    }
+   ]
+  },
+  {
+   "path": "stls/shell/eol/usbc-ethernet/Shell-x1206.stl",
+   "group": "shell",
+   "status": "eol",
+   "name": "Shell-x1206",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -108.05
+    ],
+    [
+     200.0,
+     214.25,
+     3.02
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      134.71,
+      76.52,
+      -69.55
+     ],
+     "dir": [
+      -0.0,
+      0.1712,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      33.71,
+      76.51,
+      -69.55
+     ],
+     "dir": [
+      -0.0,
+      0.1712,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      134.71,
+      19.38,
+      -79.55
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      -0.9848
+     ],
+     "tilt": 10.0,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      33.71,
+      19.37,
+      -79.55
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      -0.9848
+     ],
+     "tilt": 10.0,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      44.96,
+      8.9,
+      -88.06
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -29.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -16.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      170.0,
+      8.9,
+      -15.98
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      30.0,
+      0.1,
+      -15.98
+     ],
+     "dir": [
+      0.0,
+      1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      155.04,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    }
+   ]
+  },
+  {
+   "path": "stls/shell/v1/Shell-x12-a1.stl",
+   "group": "shell",
+   "status": "v1",
+   "name": "Shell-x12-a1",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -108.05
+    ],
+    [
+     200.0,
+     214.25,
+     3.02
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.7,
+     "blind": true,
+     "entry": [
+      55.81,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      -0.0,
+      0.1681,
+      -0.9858
+     ],
+     "tilt": 9.7,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.7,
+     "blind": true,
+     "entry": [
+      142.71,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      -0.0,
+      0.1681,
+      -0.9858
+     ],
+     "tilt": 9.7,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      55.81,
+      20.08,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1713,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      142.71,
+      20.08,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1713,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      30.0,
+      8.9,
+      -16.98
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      44.96,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      155.04,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      170.0,
+      0.1,
+      -16.98
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    }
+   ]
+  },
+  {
+   "path": "stls/shell/v1/Shell-x1202.stl",
+   "group": "shell",
+   "status": "v1",
+   "name": "Shell-x1202",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -108.05
+    ],
+    [
+     200.0,
+     214.25,
+     3.02
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.7,
+     "blind": true,
+     "entry": [
+      45.71,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      0.0,
+      0.1694,
+      -0.9855
+     ],
+     "tilt": 9.8,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.7,
+     "blind": true,
+     "entry": [
+      134.71,
+      77.19,
+      -73.35
+     ],
+     "dir": [
+      -0.0,
+      0.1694,
+      -0.9855
+     ],
+     "tilt": 9.8,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.5,
+     "blind": true,
+     "entry": [
+      45.71,
+      20.09,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1716,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 9.5,
+     "blind": true,
+     "entry": [
+      134.71,
+      20.09,
+      -83.55
+     ],
+     "dir": [
+      -0.0,
+      0.1716,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      30.0,
+      8.9,
+      -16.98
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      44.96,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      155.04,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      170.0,
+      0.1,
+      -16.98
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    }
+   ]
+  },
+  {
+   "path": "stls/shell/v1/Shell-x1206.stl",
+   "group": "shell",
+   "status": "v1",
+   "name": "Shell-x1206",
+   "bounds": [
+    [
+     0.0,
+     0.0,
+     -108.05
+    ],
+    [
+     200.0,
+     214.25,
+     3.02
+    ]
+   ],
+   "holes": [
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      134.71,
+      76.52,
+      -69.55
+     ],
+     "dir": [
+      -0.0,
+      0.1712,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      33.71,
+      76.51,
+      -69.55
+     ],
+     "dir": [
+      -0.0,
+      0.1712,
+      -0.9852
+     ],
+     "tilt": 9.9,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      134.71,
+      19.38,
+      -79.55
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      -0.9848
+     ],
+     "tilt": 10.0,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.28,
+     "depth": 7.5,
+     "blind": true,
+     "entry": [
+      33.71,
+      19.37,
+      -79.55
+     ],
+     "dir": [
+      -0.0,
+      0.1736,
+      -0.9848
+     ],
+     "tilt": 10.0,
+     "role": "UPS / Raspberry Pi stack"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      30.0,
+      8.9,
+      -16.98
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      43.52,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      63.84,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      89.84,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      110.16,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      -0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      136.16,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -41.21
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m25-insert",
+     "label": "M2.5 heat-set insert",
+     "d": 3.38,
+     "depth": 6.0,
+     "blind": true,
+     "entry": [
+      156.48,
+      8.9,
+      -28.51
+     ],
+     "dir": [
+      0.0,
+      -1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Sensor bay (Adafruit breakout)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      44.96,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      155.04,
+      0.1,
+      -88.06
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      -0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    },
+    {
+     "kind": "m3-insert",
+     "label": "M3 heat-set insert",
+     "d": 4.37,
+     "depth": 9.0,
+     "blind": false,
+     "entry": [
+      170.0,
+      0.1,
+      -16.98
+     ],
+     "dir": [
+      -0.0,
+      1.0,
+      0.0
+     ],
+     "tilt": 0.0,
+     "role": "Adjustable foot (skip with solid feet)"
+    }
+   ]
+  }
+ ]
+}

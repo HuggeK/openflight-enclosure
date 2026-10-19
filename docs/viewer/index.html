@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenFlight Enclosure Insert Map</title>
+<meta name="description" content="Interactive 3D map of every heat-set insert and screw hole in the OpenFlight enclosure STLs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: workbench drawing. Part pickers on top, 3D viewport left, hole schedule right (stacks on phones). */
+:root{
+  --bg:#eef0ef; --panel:#f8f9f8; --ink:#1d2321; --muted:#5d6764; --line:#cfd5d2;
+  --brass:#b5862a; --m25:#2f7d8c; --m2:#8a4fb0; --pilot:#56626a; --clear:#8f9895; --other:#a0634a;
+  --print:#c9cecb; --view:#e3e7e5; --focus:#d2572c;
+  --f-display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#151918; --panel:#1c2120; --ink:#e5e9e7; --muted:#9aa5a1; --line:#2f3735;
+  --brass:#d8a845; --m25:#4fb3c4; --m2:#b886d9; --pilot:#8d9aa3; --clear:#6f7875; --other:#d08a6c;
+  --print:#59625f; --view:#202624; --focus:#f07a4c; color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);padding:20px max(16px,env(safe-area-inset-right)) 32px max(16px,env(safe-area-inset-left))}
+.wrap{max-width:1320px;margin:0 auto;display:grid;gap:16px}
+h1{font:700 clamp(26px,3.4vw,36px)/1.1 var(--f-display);margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:4px 0 0;max-width:80ch}
+a{color:inherit}
+.pickers{display:flex;flex-wrap:wrap;gap:10px 14px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.pick{display:grid;gap:2px;min-width:0}
+.pick label{font:600 11.5px var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.pick select{font:14px var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:5px 8px;max-width:260px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--muted);align-items:center}
+.sw{width:11px;height:11px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:-1px}
+.sw.sq{border-radius:2px}
+.main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:900px){.main{grid-template-columns:minmax(0,1fr)}}
+.viewer{position:relative;background:var(--view);border:1px solid var(--line);border-radius:8px;overflow:hidden;height:min(70vh,660px);min-height:380px}
+.viewer canvas{display:block;width:100%;height:100%;touch-action:none}
+.labels{position:absolute;inset:0;pointer-events:none}
+.tag{font:500 11px/18px var(--f-mono);color:#fff;border-radius:9px;padding:0 6px;min-width:18px;text-align:center;pointer-events:auto;cursor:pointer;box-shadow:0 0 0 1.5px var(--view)}
+.tag.sq{border-radius:3px}
+.tag.on{outline:2px solid var(--focus);outline-offset:1px}
+.bar{position:absolute;left:10px;right:10px;top:10px;display:flex;flex-wrap:wrap;gap:6px;pointer-events:none}
+.bar>*{pointer-events:auto}
+.btn{font:500 13px var(--f-body);color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:5px 10px;cursor:pointer}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.btn:focus-visible,.row:focus-visible,select:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.hint{position:absolute;right:10px;bottom:8px;font-size:12px;color:var(--muted)}
+.status{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);text-align:center;padding:24px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px;min-width:0}
+.card h2{font:700 15px var(--f-display);letter-spacing:.06em;text-transform:uppercase;margin:0 0 4px}
+.card p{margin:0 0 8px;color:var(--muted);font-size:14px}
+.list{max-height:min(64vh,620px);overflow:auto;margin:0 -16px -14px}
+.grp{padding:10px 16px 4px;border-top:1px solid var(--line)}
+.grp h3{font:600 14px var(--f-display);letter-spacing:.05em;text-transform:uppercase;margin:0}
+.grp .file{font:12px var(--f-mono);color:var(--muted);word-break:break-all}
+.row{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:4px 10px;align-items:center;padding:6px 16px;cursor:pointer;border-left:3px solid transparent}
+.row:hover{background:color-mix(in srgb,var(--ink) 5%,transparent)}
+.row.on{border-left-color:var(--focus);background:color-mix(in srgb,var(--focus) 9%,transparent)}
+.num{font:500 12px/20px var(--f-mono);color:#fff;border-radius:9px;text-align:center}
+.num.sq{border-radius:3px}
+.what{font-size:14px;min-width:0}
+.what small{display:block;color:var(--muted);font-size:12px}
+.spec{font:12px var(--f-mono);color:var(--muted);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.totals{display:flex;flex-wrap:wrap;gap:8px}
+.tot{display:flex;align-items:baseline;gap:8px;border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:5px 11px}
+.tot b{font:500 19px var(--f-mono)}
+.tot span{font-size:13px;color:var(--muted)}
+footer{font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>OpenFlight Enclosure Insert Map</h1>
+    <p class="sub">Every heat-set insert and screw hole in the enclosure STLs, found by slicing the meshes (<a href="../../tools/insert-map/analyze.py">tools/insert-map/analyze.py</a>). Pick your variants, then tap a number or a row to fly to that hole. The arrow shows which side the insert or screw goes in from.</p>
+  </header>
+
+  <div class="pickers" id="pickers" aria-label="Choose parts"></div>
+  <div class="totals" id="totals"></div>
+  <div class="legend" id="legend"></div>
+
+  <div class="main">
+    <div class="viewer" id="viewer">
+      <canvas id="c" aria-label="3D view of the selected enclosure parts with hole positions"></canvas>
+      <div class="labels" id="labels"></div>
+      <div class="bar" role="group" aria-label="Camera views">
+        <button class="btn" data-view="back" aria-pressed="true">From behind</button>
+        <button class="btn" data-view="front" aria-pressed="false">From the ball side</button>
+        <button class="btn" data-view="side" aria-pressed="false">Side</button>
+        <button class="btn" data-view="top" aria-pressed="false">Inside the shell</button>
+        <button class="btn" data-view="under" aria-pressed="false">Underside</button>
+      </div>
+      <div class="hint">Drag to orbit · scroll or pinch to zoom · right-drag to pan</div>
+      <div class="status" id="status">Loading…</div>
+    </div>
+    <aside class="card">
+      <h2>Hole schedule</h2>
+      <p>Diameter and depth as modelled. Faded numbers in the 3D view face away from you.</p>
+      <div class="list" id="list"></div>
+    </aside>
+  </div>
+  <footer>Hole data is generated from the STLs; numbers change when the models change. Hardware specs: <a href="../hardware.md">Required hardware</a>.</footer>
+</div>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {STLLoader} from 'three/addons/loaders/STLLoader.js';
+import {CSS2DRenderer,CSS2DObject} from 'three/addons/renderers/CSS2DRenderer.js';
+
+// Served from the repo root (docs/viewer/) or from GitHub Pages (viewer/ beside stls/).
+const BASE = location.pathname.includes('/docs/viewer/') ? '../../' : '../';
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const KIND = {
+  'm3-insert': {tok:'--brass', od:5.0, label:'M3 insert'},
+  'm25-insert':{tok:'--m25', od:3.6, label:'M2.5 insert'},
+  'm2-insert': {tok:'--m2', od:3.3, label:'M2 insert'},
+  'pilot':     {tok:'--pilot', screw:true, label:'Self-tapping screw'},
+  'clearance': {tok:'--clear', screw:true, label:'Clearance hole'},
+  'other':     {tok:'--other', screw:true, label:'Other'},
+};
+const GROUPS = [
+  {key:'shell', name:'Shell', prefix:'H', def:'Shell-x1202', status:'v1'},
+  {key:'radar', name:'Radar front', prefix:'R', def:'Front-Radar-No-Fill', status:'v1'},
+  {key:'camera', name:'Camera front', prefix:'C', def:'Front-Camera-Sound-Detector', status:'v1'},
+  {key:'retainer', name:'Sound retainer', prefix:'T', def:null},
+  {key:'screen', name:'Screen bezel', prefix:'S', def:'Screen-800x480', status:'v1'},
+  {key:'adapters', name:'Pi adapter', prefix:'A', def:null},
+  {key:'feet', name:'Foot', prefix:'F', def:null},
+];
+const groupOf = p => p.name.includes('Retainer') ? 'retainer' : p.group;
+const status = document.getElementById('status');
+
+let DATA;
+try { DATA = await (await fetch('data/holes.json')).json(); }
+catch(e){ status.textContent='Could not load data/holes.json. Run tools/insert-map/analyze.py, then serve the repo over HTTP.'; throw e; }
+
+/* pickers */
+const pickers=document.getElementById('pickers'); const sel={};
+const params=new URLSearchParams(location.search);
+for(const g of GROUPS){
+  const opts=DATA.parts.filter(p=>groupOf(p)===g.key); if(!opts.length) continue;
+  const id='pick-'+g.key;
+  const wrap=document.createElement('div');wrap.className='pick';
+  wrap.innerHTML=`<label for="${id}">${g.name}</label>`;
+  const s=document.createElement('select');s.id=id;
+  s.add(new Option('None',''));
+  for(const p of opts) s.add(new Option(`${p.name} (${p.status})`,p.path));
+  // ?radar=Front-Radar-No-Fill@experimental picks a part by name and folder; v1 is the default folder
+  const [wantName,wantStatus]=(params.get(g.key)||'').split('@');
+  const rank=s=>({v1:0,experimental:1,eol:2}[s]??3);
+  const def=wantName
+    ? opts.filter(p=>p.name===wantName&&(!wantStatus||p.status===wantStatus)).sort((a,b)=>rank(a.status)-rank(b.status))[0]
+    : opts.find(p=>g.def&&p.name===g.def&&p.status===g.status);
+  s.value=def?def.path:'';
+  s.addEventListener('change',()=>{syncURL();rebuild();});
+  wrap.appendChild(s);pickers.appendChild(wrap);sel[g.key]=s;
+}
+function syncURL(){const q=new URLSearchParams();for(const k in sel)if(sel[k].value){const p=DATA.parts.find(x=>x.path===sel[k].value);q.set(k,p.status==='v1'?p.name:`${p.name}@${p.status}`);}history.replaceState(null,'','?'+q.toString());}
+
+/* legend */
+document.getElementById('legend').innerHTML=Object.entries(KIND).map(([k,v])=>`<span><i class="sw${v.screw?' sq':''}" style="background:var(${v.tok})"></i>${v.label}</span>`).join('');
+
+/* scene */
+const viewer=document.getElementById('viewer'),canvas=document.getElementById('c');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const labelR=new CSS2DRenderer({element:document.getElementById('labels')});
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(32,1,1,4000);
+const controls=new OrbitControls(cam,canvas);controls.enableDamping=true;controls.dampingFactor=.12;
+scene.add(new THREE.HemisphereLight(0xffffff,0x707a76,1.6));
+const key=new THREE.DirectionalLight(0xffffff,1.4);key.position.set(120,220,160);scene.add(key);
+const fill=new THREE.DirectionalLight(0xffffff,.8);fill.position.set(-150,80,-220);scene.add(fill);
+const loader=new STLLoader(); const geoCache={};
+async function loadGeo(path){
+  if(!geoCache[path]) geoCache[path]=fetch(BASE+path.split('/').map(encodeURIComponent).join('/')).then(r=>{if(!r.ok)throw new Error(r.status+' '+path);return r.arrayBuffer();}).then(b=>loader.parse(b));
+  return geoCache[path];
+}
+
+let root=new THREE.Group();scene.add(root);
+let markers=[],rows={},current=null;
+const up=new THREE.Vector3(0,1,0);
+const list=document.getElementById('list');
+
+async function rebuild(){
+  status.hidden=false;status.textContent='Loading…';
+  scene.remove(root);root=new THREE.Group();scene.add(root);
+  for(const m of markers) m.tg.remove();
+  markers=[];rows={};current=null;list.innerHTML='';
+  const chosen=GROUPS.map(g=>({g,part:sel[g.key]&&DATA.parts.find(p=>p.path===sel[g.key].value)})).filter(x=>x.part);
+  const counts={};
+  try{
+    for(const {g,part} of chosen){
+      const geo=await loadGeo(part.path);
+      const isShell=g.key==='shell';
+      const mat=new THREE.MeshStandardMaterial({color:css('--print'),roughness:.75,side:THREE.DoubleSide,transparent:isShell,opacity:isShell?.4:1,depthWrite:!isShell});
+      const mesh=new THREE.Mesh(geo,mat);mesh.userData.tok='--print';
+      // parts modelled away from the assembly (e.g. the x1202 adapter) are shown beside the shell
+      const off=new THREE.Vector3();
+      if(part.bounds[0][0]<-5) off.set(260-part.bounds[0][0],-part.bounds[0][1],-60-part.bounds[0][2]);
+      const grp=new THREE.Group();grp.position.copy(off);grp.add(mesh);grp.userData={group:g.key,shell:isShell,mat};root.add(grp);
+      const sec=document.createElement('div');sec.className='grp';
+      sec.innerHTML=`<h3>${g.name}${off.lengthSq()?' <small style="font-weight:400;text-transform:none">(shown beside the case)</small>':''}</h3><div class="file">${part.path}</div>`;list.appendChild(sec);
+      const holes=[...part.holes].sort((a,b)=>(a.role||a.label).localeCompare(b.role||b.label)||b.entry[1]-a.entry[1]||a.entry[0]-b.entry[0]);
+      holes.forEach((h,i)=>{
+        const K=KIND[h.kind]||KIND.other; const id=g.prefix+(i+1);
+        counts[h.kind]=(counts[h.kind]||0)+1;
+        const dir=new THREE.Vector3(...h.dir).normalize(),e=new THREE.Vector3(...h.entry);
+        const col=css(K.tok); const m=new THREE.MeshStandardMaterial({color:col,metalness:.5,roughness:.4});
+        const hg=new THREE.Group();
+        if(K.screw){
+          const L=Math.min(h.depth,9),r=h.d/2+.3;
+          const shaft=new THREE.Mesh(new THREE.CylinderGeometry(r,r,L,16),m);shaft.position.copy(e.clone().addScaledVector(dir,L/2-.4));shaft.quaternion.setFromUnitVectors(up,dir);
+          const head=new THREE.Mesh(new THREE.CylinderGeometry(h.d*.95,h.d*.95,1.4,20),m);head.position.copy(e.clone().addScaledVector(dir,-2.2));head.quaternion.setFromUnitVectors(up,dir);
+          hg.add(shaft,head);
+        }else{
+          const body=new THREE.Mesh(new THREE.CylinderGeometry(K.od/2,K.od/2,4,24,1,true),m);body.position.copy(e.clone().addScaledVector(dir,2));body.quaternion.setFromUnitVectors(up,dir);
+          const cap=new THREE.Mesh(new THREE.RingGeometry(K.od*.28,K.od/2,24),new THREE.MeshStandardMaterial({color:col,metalness:.5,roughness:.4,side:THREE.DoubleSide}));
+          cap.position.copy(e.clone().addScaledVector(dir,-.05));cap.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),dir.clone().negate());
+          hg.add(body,cap);
+        }
+        hg.add(new THREE.ArrowHelper(dir,e.clone().addScaledVector(dir,-14),11,col,3.6,2.4));
+        const tg=document.createElement('div');tg.className='tag'+(K.screw?' sq':'');tg.textContent=id;tg.style.background=col;
+        tg.addEventListener('click',()=>focus(id));
+        const lab=new CSS2DObject(tg);lab.position.copy(e.clone().addScaledVector(dir,-17));hg.add(lab);
+        grp.add(hg);
+        const world=e.clone().add(off);
+        markers.push({id,tg,dir,e:world,group:grp});
+        const r=document.createElement('div');r.className='row';r.tabIndex=0;r.setAttribute('role','button');
+        r.innerHTML=`<span class="num${K.screw?' sq':''}" style="background:${col}">${id}</span>
+          <span class="what">${h.role||h.label}<small>${h.role?h.label:''}${h.tilt>1?` · tilted ${h.tilt.toFixed(0)}°`:''}</small></span>
+          <span class="spec">Ø${h.d.toFixed(2)}<br>${h.depth.toFixed(1)} mm ${h.blind?'blind':'through'}</span>`;
+        r.addEventListener('click',()=>focus(id));
+        r.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();focus(id);}});
+        list.appendChild(r);rows[id]=r;
+      });
+      if(!part.holes.length){const p=document.createElement('p');p.style.padding='0 16px';p.textContent='No fastener holes found.';list.appendChild(p);}
+    }
+    status.hidden=true;
+  }catch(err){status.textContent='Could not load an STL: '+err.message;console.error(err);}
+  const tot=document.getElementById('totals');
+  tot.innerHTML=Object.entries(KIND).filter(([k])=>counts[k]).map(([k,v])=>`<div class="tot"><i class="sw${v.screw?' sq':''}" style="background:var(${v.tok})"></i><b>${counts[k]}</b><span>${v.label}${counts[k]>1&&!v.screw?'s':''}</span></div>`).join('');
+}
+
+/* views */
+const VIEWS={
+  back:{p:[30,175,-580],t:[100,105,-25],shellSolid:false},
+  front:{p:[150,165,570],t:[100,105,-20],shellSolid:false},
+  side:{p:[620,130,-40],t:[100,105,-25],shellSolid:false},
+  top:{p:[100,330,190],t:[100,40,-55],shellSolid:true},
+  under:{p:[100,-300,40],t:[100,0,-55],shellSolid:true},
+};
+let anim=null;
+function fly(p,t,ms=650){const p0=cam.position.clone(),t0=controls.target.clone(),p1=new THREE.Vector3(...p),t1=new THREE.Vector3(...t);
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const st=performance.now();
+  anim=now=>{let k=reduce?1:Math.min(1,(now-st)/ms);k=1-Math.pow(1-k,3);cam.position.lerpVectors(p0,p1,k);controls.target.lerpVectors(t0,t1,k);if(k>=1)anim=null;};}
+function shellSolid(on){for(const g of root.children)if(g.userData.shell){const m=g.userData.mat;m.opacity=on?1:.4;m.transparent=!on;m.depthWrite=on;m.needsUpdate=true;}
+  for(const g of root.children)if(!g.userData.shell)g.visible=!on;}
+function setView(name,instant){const v=VIEWS[name];shellSolid(v.shellSolid);
+  document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===name));
+  if(instant){cam.position.set(...v.p);controls.target.set(...v.t);}else fly(v.p,v.t);}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+function focus(id){const m=markers.find(x=>x.id===id);if(!m)return;
+  shellSolid(m.group.userData.shell);if(!m.group.userData.shell)for(const g of root.children)g.visible=true;
+  document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed','false'));
+  if(current){const c=markers.find(x=>x.id===current);c&&c.tg.classList.remove('on');rows[current]&&rows[current].classList.remove('on');}
+  current=id;m.tg.classList.add('on');rows[id].classList.add('on');rows[id].scrollIntoView({block:'nearest'});
+  const side=Math.abs(m.dir.y)>.9?new THREE.Vector3(0,0,1):new THREE.Vector3(0,1,0);
+  fly(m.e.clone().addScaledVector(m.dir,-190).addScaledVector(side,45).add(new THREE.Vector3(30,0,0)).toArray(),m.e.toArray());}
+
+function resize(){const w=viewer.clientWidth,h=viewer.clientHeight;renderer.setSize(w,h,false);labelR.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix();}
+new ResizeObserver(resize).observe(viewer);resize();
+function retheme(){scene.background=new THREE.Color(css('--view'));for(const g of root.children)g.userData.mat&&g.userData.mat.color.set(css('--print'));}
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{retheme();rebuild();});
+
+await rebuild();retheme();setView('back',true);
+const tmp=new THREE.Vector3();
+renderer.setAnimationLoop(now=>{if(anim)anim(now);controls.update();
+  for(const m of markers){tmp.copy(m.e).sub(cam.position);const vis=m.group.visible;m.tg.hidden=!vis;m.tg.style.opacity=(tmp.dot(m.dir)>0||m.tg.classList.contains('on'))?'':'0.28';}
+  renderer.render(scene,cam);labelR.render(scene,cam);});
+window.__ready=true;
+</script>
+</body>
+</html>

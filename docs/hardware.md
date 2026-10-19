@@ -2,6 +2,8 @@
 
 Install inserts with a soldering iron, square to the boss, flush with the plastic. Do not drive a screw into bare plastic in an insert hole.
 
+To see where each insert goes, with the hole diameter and depth for your exact parts, open the [insert map](https://open-flight.github.io/openflight-enclosure/viewer/).
+
 ## Standard parts (buy these)
 
 | Part | Spec | Used for |
